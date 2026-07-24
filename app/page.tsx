@@ -82,6 +82,22 @@ const faqs = [
 export default function Home() {
   return (
     <main>
+      <a
+        className="placeProposalWidget"
+        href="https://gumse-place-growth.viyorr.chatgpt.site"
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="금새인터랙티브 플레이스 활성관리 제안서 새 창으로 열기"
+      >
+        <span className="placeWidgetIcon">P</span>
+        <span className="placeWidgetCopy">
+          <small>GUMSE PLACE SOLUTION</small>
+          <b>블로그로 신뢰를 쌓았다면,<br/>이제는 플레이스에서 선택받을 차례입니다.</b>
+          <em>플레이스 활성관리 알아보기 →</em>
+        </span>
+        <i aria-hidden="true">↗</i>
+      </a>
+
       <nav className="nav">
         <a className="brand" href="#top" aria-label="금새인터랙티브 제안서 처음으로">
           <img src="/gumse-logo-transparent.png" alt="금새인터랙티브" />

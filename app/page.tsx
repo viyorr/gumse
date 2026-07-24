@@ -84,7 +84,7 @@ export default function Home() {
     <main>
       <a
         className="placeProposalWidget"
-        href="https://gumse-place-growth.viyorr.chatgpt.site"
+  href="https://gumse-place-growth.netlify.app/"
         target="_blank"
         rel="noopener noreferrer"
         aria-label="금새인터랙티브 플레이스 활성관리 제안서 새 창으로 열기"

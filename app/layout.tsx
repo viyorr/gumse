@@ -5,14 +5,14 @@ const siteUrl =
   process.env.NEXT_PUBLIC_SITE_URL || "https://example.com";
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  metadataBase: new URL("https://gumse-blog-growth.netlify.app"),
   title: "블로그를 키우는 건 글의 개수가 아닙니다 | 금새인터랙티브",
   description:
     "콘텐츠 품질과 블로그 운영을 함께 관리하는 금새인터랙티브 블로그 성장 전략 제안서",
   openGraph: {
     type: "website",
     locale: "ko_KR",
-    url: siteUrl,
+    url: "https://gumse-blog-growth.netlify.app/",
     siteName: "금새인터랙티브",
     title: "블로그를 키우는 건 글의 개수가 아닙니다 | 금새인터랙티브",
     description:

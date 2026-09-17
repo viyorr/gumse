@@ -31,9 +31,16 @@ const operationAxes = [
 ];
 
 const dwellPlans = [
-  { name: "엘리트형", traffic: "일 300명+ · 체류 150초+", price: "13만원", tone: "lime" },
-  { name: "노블형", traffic: "일 1,000명+ · 체류 150초+", price: "22만원", tone: "orange", featured: true },
-  { name: "로얄형", traffic: "일 2,000명+ · 체류 150초+", price: "40만원", tone: "violet" },
+  { name: "로얄형", traffic: "일 2,000명+ · 체류 150초+", price: "37만원", tone: "violet" },
+  { name: "노블형", traffic: "일 1,000명+ · 체류 150초+", price: "19만원", tone: "orange", featured: true },
+  { name: "엘리트형", traffic: "일 300명+ · 체류 150초+", price: "10만원", tone: "lime" },
+];
+
+const postingPlans = [
+  { length: "500자", price: "15,000원" },
+  { length: "1,000자", price: "30,000원" },
+  { length: "1,500자", price: "35,000원" },
+  { length: "2,000자", price: "40,000원" },
 ];
 
 const process = [
@@ -310,6 +317,20 @@ export default function Home() {
             <article><span>02</span><h3>정보성 + 홍보성</h3><p>신뢰를 쌓는 정보와 서비스를 알리는 콘텐츠를 균형 있게 구성합니다.</p></article>
             <article><span>03</span><h3>3~5영업일</h3><p>10건 기준 작성 기간이며, 자료와 일정에 따라 달라질 수 있습니다.</p></article>
             <article><span>04</span><h3>전문 작가팀 발행</h3><p>접수 후 작성·검수·업로드 스케줄에 맞춰 순차 발행합니다.</p></article>
+          </div>
+        </div>
+        <div className="posting-prices">
+          <div className="posting-price-head">
+            <h3>포스팅 상품 가격</h3>
+            <p>건당 가격 · 최소 10건부터 진행 · VAT 별도</p>
+          </div>
+          <div className="posting-price-grid">
+            {postingPlans.map((plan) => (
+              <article key={plan.length}>
+                <h4>{plan.length}</h4>
+                <div><strong>{plan.price}</strong><span>/ 건</span></div>
+              </article>
+            ))}
           </div>
         </div>
         <div className="design-strip">

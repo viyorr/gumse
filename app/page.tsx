@@ -23,13 +23,6 @@ const operationAxes = [
   },
   {
     no: "03",
-    title: "소통 기반",
-    label: "NETWORK",
-    desc: "이웃 관계와 재방문, 사용자 반응이 자연스럽게 이어지는 운영 기반을 만듭니다.",
-    items: ["이웃 확장", "소통 흐름", "재방문 기반"],
-  },
-  {
-    no: "04",
     title: "체류 환경",
     label: "ENGAGEMENT",
     desc: "읽을 이유가 있는 구성과 콘텐츠 연결로 방문자가 글을 충분히 소비할 수 있는 환경을 설계합니다.",
@@ -37,29 +30,23 @@ const operationAxes = [
   },
 ];
 
-const basicPlans = [
-  { name: "일반형", traffic: "일 300명+", price: "10만원", tone: "lime" },
-  { name: "프리미엄형", traffic: "일 1,000명+", price: "16만원", tone: "orange", featured: true },
-  { name: "그랜드형", traffic: "일 2,000명+", price: "28만원", tone: "violet" },
-];
-
 const dwellPlans = [
-  { name: "엘리트형", traffic: "방문 + 이웃 + 체류", price: "13만원", tone: "lime" },
-  { name: "노블형", traffic: "방문 + 이웃 + 체류", price: "22만원", tone: "orange", featured: true },
-  { name: "로얄형", traffic: "방문 + 이웃 + 체류", price: "40만원", tone: "violet" },
+  { name: "엘리트형", traffic: "일 300명+ · 체류 150초+", price: "13만원", tone: "lime" },
+  { name: "노블형", traffic: "일 1,000명+ · 체류 150초+", price: "22만원", tone: "orange", featured: true },
+  { name: "로얄형", traffic: "일 2,000명+ · 체류 150초+", price: "40만원", tone: "violet" },
 ];
 
 const process = [
   ["01", "현황 진단", "현재 발행 주제, 운영 빈도, 방문 흐름과 블로그 상태를 확인합니다."],
   ["02", "운영 설계", "업종과 목표 키워드에 맞춰 콘텐츠와 활성화 강도를 설계합니다."],
-  ["03", "콘텐츠·운영", "정기 포스팅과 방문·이웃·체류 관리를 함께 진행합니다."],
+  ["03", "콘텐츠·운영", "정기 포스팅과 방문·체류 관리를 함께 진행합니다."],
   ["04", "변화 확인", "운영 데이터와 검색 노출 변화를 확인하며 방향을 보완합니다."],
 ];
 
 const faqs = [
   {
-    q: "방문자나 이웃이 많으면 무조건 상위노출되나요?",
-    a: "아닙니다. 검색노출은 콘텐츠의 원본성·유용성·전문성 등 다양한 요소가 함께 작동합니다. 방문자와 이웃 관리는 블로그가 꾸준히 소비되고 운영되는 환경을 만드는 한 축이며, 콘텐츠 품질 관리와 함께 진행해야 합니다.",
+    q: "방문자와 체류시간이 늘면 무조건 상위노출되나요?",
+    a: "아닙니다. 검색노출은 콘텐츠의 원본성·유용성·전문성 등 다양한 요소가 함께 작동합니다. 방문자와 체류시간 관리는 블로그 콘텐츠가 꾸준히 소비되는 환경을 만드는 한 축이며, 콘텐츠 품질 관리와 함께 진행해야 합니다.",
   },
   {
     q: "AI로 작성한 글도 괜찮나요?",
@@ -75,7 +62,7 @@ const faqs = [
   },
   {
     q: "작업을 멈추면 블로그가 바로 나빠지나요?",
-    a: "기존 콘텐츠와 이웃이 사라지는 것은 아닙니다. 다만 발행과 소통, 방문 흐름이 멈추면 성장 속도와 최신성이 둔화될 수 있어 꾸준한 운영을 권장합니다.",
+    a: "기존 콘텐츠가 사라지는 것은 아닙니다. 다만 발행과 방문 흐름이 멈추면 성장 속도와 최신성이 둔화될 수 있어 꾸준한 운영을 권장합니다.",
   },
 ];
 
@@ -217,7 +204,7 @@ export default function Home() {
             <ul>
               <li>발행 직후만 잠깐 노출</li>
               <li>주제와 문맥이 매번 달라짐</li>
-              <li>방문·소통·재방문 흐름 부족</li>
+              <li>방문·체류 흐름 부족</li>
               <li>콘텐츠가 개별 문서로 끝남</li>
             </ul>
             <div className="flat-line"><i /><i /><i /><i /><i /></div>
@@ -230,7 +217,7 @@ export default function Home() {
             <ul>
               <li>검색 의도에 맞춘 콘텐츠 설계</li>
               <li>한 분야에 축적되는 전문성</li>
-              <li>꾸준한 방문·이웃·체류 환경</li>
+              <li>꾸준한 방문·체류 환경</li>
               <li>블로그 전체가 브랜드 자산화</li>
             </ul>
             <div className="rise-bars">{[28,42,53,68,84,100].map((h)=><i key={h} style={{height:`${h}%`}} />)}</div>
@@ -244,7 +231,7 @@ export default function Home() {
         <div className="system-head">
           <div>
             <p className="eyebrow light"><i /> GUMSE BLOG ACTIVATION</p>
-            <h2 className="section-title">블로그 성장의 네 축을<br /><span>하나의 흐름으로.</span></h2>
+            <h2 className="section-title">블로그 성장의 세 축을<br /><span>하나의 흐름으로.</span></h2>
           </div>
           <p>숫자 하나를 인위적으로 키우는 방식이 아니라, 콘텐츠가 발행되고 소비되고 다시 방문되는 운영 흐름을 함께 설계합니다.</p>
         </div>
@@ -273,7 +260,7 @@ export default function Home() {
               "꾸준히 글을 올려도 검색 유입이 거의 없다",
               "발행 직후 잠깐 보이다가 금방 사라진다",
               "블로그 주제가 섞여 전문성이 모호하다",
-              "방문자와 이웃, 사용자 반응이 정체돼 있다",
+              "방문자와 체류시간, 사용자 반응이 정체돼 있다",
               "사진은 많지만 검색 의도에 맞는 설명이 부족하다",
               "담당자가 바뀔 때마다 발행과 운영이 멈춘다",
             ].map((x,i)=><div key={x}><span>0{i+1}</span><p>{x}</p><b>CHECK</b></div>)}
@@ -285,7 +272,7 @@ export default function Home() {
         <p className="section-no">05 / ACTIVATION PLAN</p>
         <div className="plan-head">
           <div>
-            <p className="eyebrow"><i /> 3 MONTH BASIC PACKAGE</p>
+            <p className="eyebrow"><i /> 3 MONTH DWELL-TIME PACKAGE</p>
             <h2 className="section-title">현재 블로그 상태에 맞춰<br />운영 강도를 선택하세요.</h2>
           </div>
           <p>모든 활성화 상품은 기본 3개월 기준이며, VAT는 별도입니다. 6개월 진행 시 1개월, 12개월 진행 시 3개월을 추가 제공합니다.</p>
@@ -293,26 +280,9 @@ export default function Home() {
 
         <div className="plan-block">
           <div className="plan-label">
-            <small>PACKAGE A</small>
-            <h3>방문자 + 이웃</h3>
-            <p>기본 활성화 흐름을 만들고 싶은 블로그</p>
-          </div>
-          <div className="price-grid">
-            {basicPlans.map((plan)=><article key={plan.name} className={`${plan.tone} ${plan.featured?"featured":""}`}>
-              {plan.featured && <em>가장 많이 선택</em>}
-              <small>{plan.traffic}</small>
-              <h4>{plan.name}</h4>
-              <div><strong>{plan.price}</strong><span>/ 월</span></div>
-              <p>방문 흐름 관리<br />활성 이웃 확장</p>
-            </article>)}
-          </div>
-        </div>
-
-        <div className="plan-block">
-          <div className="plan-label">
-            <small>PACKAGE B</small>
-            <h3>방문자 + 이웃 + 체류</h3>
-            <p>콘텐츠 소비 환경까지 함께 관리하고 싶은 블로그</p>
+            <small>DWELL-TIME VISITOR</small>
+            <h3>체류시간 방문자</h3>
+            <p>꾸준한 방문 흐름과 150초 이상 체류 환경을 함께 관리합니다.</p>
           </div>
           <div className="price-grid">
             {dwellPlans.map((plan)=><article key={plan.name} className={`${plan.tone} ${plan.featured?"featured":""}`}>
@@ -320,11 +290,11 @@ export default function Home() {
               <small>{plan.traffic}</small>
               <h4>{plan.name}</h4>
               <div><strong>{plan.price}</strong><span>/ 월</span></div>
-              <p>방문·이웃 활성화<br />150초 이상 체류 환경</p>
+              <p>일평균 방문자 {plan.name === "엘리트형" ? "300명" : plan.name === "노블형" ? "1,000명" : "2,000명"} 활성화<br />150초 이상 체류 환경</p>
             </article>)}
           </div>
         </div>
-        <p className="price-note">* 방문 수와 체류시간은 선택한 상품 유형에 따라 달라집니다. 특정 키워드 순위와 매출은 보장하지 않습니다.</p>
+        <p className="price-note">* 방문 수는 선택한 상품 유형에 따라 달라집니다. 특정 키워드 순위와 매출은 보장하지 않습니다.</p>
       </section>
 
       <section className="section content-service">
